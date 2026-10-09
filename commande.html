@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar El Halwa - Patisserie fine tunisienne</title>
+</head>
+<body>
+    <h1>Dar El Halwa</h1>
+    <header>patisserie fine tunisienne depuis 1900 </header>
+       <figure>
+        <img src="image/patisserie.jpg" alt="vitrine moderne de la patisserie dar el halwa">
+        <figcaption>notre vitrine de mignardise traditionneles.</figcaption> 
+       </figure>
+    <nav id="sommaire">
+    <ul>
+        <li><a href="index.html#apropos">a propos</a></li>
+        <li><a href="index.html#nosproduits">Nos produits</a></li>
+        <li><a href="index.html#services">services</a></li>
+        <li><a href="index.html#contact">contact</a></li>
+        <li><a href="index.html#commander">commander</a></li>
+    </ul>
+    </nav>
+    <main>
+        <h2>Commander un gâteau personnalisé</h2>
+        <form action="traitement.php" method="post">
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <p>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name=""nom" minlength="2" required>
+                </p>
+                <p>
+                    <label for="prenom">prenom :</label>
+                    <input type="text" id=""prenom" name=""prenom" minlength="2" required>
+                </p>
+                <p>
+                    <label for="email" >Adresse electronique : </label>
+                    <input type="email" id="email" name="email" placeholder="vous@exemple.tn" required>
+                </p>
+                <p>
+                    <label for="telephone">telephone :</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="\+216[2459],[0-9]{7}" title="+216 suivi de 8 chiffres" placeholder="+21622550211" required>
+                </p>
+                <p>
+                    <label for="code_postal">Code postal :</label>
+                    <input type="text" id="code_postal"
+                    name="code_postal"
+                    pattern="[0-9]{4}"
+                    title="Entrez exactement 4 chiffres"
+                    required>
+                </p>
+                <p>
+                    <label for="adresse">Adresse de livraison :</label><br>
+                    <textarea id="adresse" name="adresse"
+                     rows="3" cols="40" required></textarea>
+                </p>
+                <p>
+                    <label for="gouvernorat">Gouvernorat :</label>
+                    <select id="gouvernorat" name="gouvernorat">
+                        <option value="Sfax" selected>Sfax</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Gabes">Gabès</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Votre gateau</legend>
+                <fieldset>
+                    <legend>Occasion</legend> <input type="radio" id="occ-anniv" name="occasion" value="anniversaire" required>
+                    <label for="occ-anniv">Anniversaire</label>
+                    <input type="radio" id="occ-mariage" name="occasion" value="mariage">
+                    <label for="occ-mariage">Mariage</label>
+                    <input type="radio" id="occ-fiancailles" name="occasion" value="fiancailles">
+                    <label for="occ-fiancailles">Fiançailles</label>
+                    <input type="radio" id="occ-autre" name="occasion" value="autre">
+                    <label for="occ-autre">Autre</label>
+                </fieldset>
+                <p> 
+                    <label for="date_retrait">Date de retrait :</label>
+                    <input type="date" id="date_retrait" name="date_retrait" min="2026-09-01" required>
+                </p>
+                <p> 
+                    <label for="parts">Nombre de parts :</label>
+                    <input type="number" id="parts" name="parts" min="6" max="100" step="2" value="12" required>
+                </p>
+                <fieldset>
+                    <legend>Parfums souhaités</legend>
+                    <input type="radio" id="parfum-chocolat" name="parfums[]" value="chocolat" checked>
+                    <label for="parfum-chocolat">Chocolat</label>
+                    <input type="radio" id="parfum-vanille" name="parfums[]" value="vanille">
+                    <label for="parfum-vanille">Vanille</label>
+                    <input type="radio" id="parfum-pistache" name="parfums[]" value="pistache">
+                    <label for="parfum-pistache">Pistache</label>
+                    <input type="radio" id="parfum-fruits" name="parfums[]" value="fruits-rouges">
+                    <label for="parfum-fruits">Fruits rouges</label>
+                </fieldset>
+                 <p>
+                    <label for="decors">Langages de décoration :</label>
+                    <select multiple size="4" id="decors" name="decors[]">
+                        <option value="fleurs">Fleurs en pâte à sucre</option>
+                        <option value="fruits">Fruits frais</option>
+                        <option value="chocolat">Décoration en chocolat</option>
+                        <option value="perles">Perles et paillettes</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="precisions">Précisions :</label>
+                    <textarea id="precisions" name="precisions"
+                    rows="4" cols="40" maxlength="200">
+                    </textarea>
+                </p>
+                <p>
+                    <label for="sucre">Niveau de sucre :</label>
+                    <input type="range" id="sucre" name="sucre" min="0" max="10" step="1" value="5">
+                </p>
+                <p>
+                    <label for="couleur">Couleur du glaçage :</label>
+                    <input type="color" id="couleur" name="couleur" value="#c8912a">
+                </p>
+                <p>
+                    <label for="message">Message sur le gâteau :</label>
+                    <input type="text" id="message" name="message" maxlength="30">
+                </p>
+                <p>
+                    <label for="photo">Photo de modèle :</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </p>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>confirmation</legend>
+            </fieldset>
+            <p>
+                <button type="submit">Envoyer ma commande</button>
+                <button type="reset">Tout effacer</button>
+                <button type="submit" formnovalidate>Envoyer sans validation</button>
+            </p>
+        </form>
+
+                
+    </main>
+    <footer>
+        dar el halwa 1900
+        <h1>Suivez-nous</h1>
+        <a href="https://www.facebook.com/darelhalwa" target="-blank" rel="noopener">facebook</a>
+        <a href="https://www.instagram.com/darelhalwa" target="-blank" rel="noopener">instagram</a>
+        <a href="https://www.linkedin.com/company/darelhalwa" target="-blank" rel="noopener">linkedln</a>
+     </footer>
+
+</body>
