@@ -1,0 +1,140 @@
+*, *::before, *::after {
+box-sizing: border-box;
+}
+:root {
+--miel: #c8912a;
+--chocolat: #4a2c1a;
+--creme: #fff8ef;
+--pistache: #6b8e4e;
+--gris-texte: #3a3a3a;
+--espace: 1rem;
+}
+body {
+    background-color: var(--creme);
+    color: var(--gris-texte);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/*style css*/
+h1 { color: blue;}
+h2 {
+    color: var(--chocolat);
+    border-bottom: 2px solid var(--miel);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--chocolat);
+    font-weight: bold;
+}
+
+/* 3. Les catégories de produits  */
+strong {
+    color: var(--miel);
+}
+
+/* 4. Le pied de page  */
+footer {
+    background-color: var(--chocolat);
+    color: var(--creme);
+    text-align: center;
+}
+
+/* 5. Les paragraphes ET les éléments de liste  */
+p, li {
+    line-height: 1.6;
+}
+
+/* 6. La section contact  */
+#contact {
+    background-color: white;
+    padding: var(--espace);
+}
+
+/* 7. La classe mise-en-avant  */
+.mise-en-avant {
+    font-size: larger;
+    font-style: italic;
+}
+/* États des liens */
+
+a:link {
+    color: var(--miel);
+}
+a:visited {
+    color: var(--pistache);
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--chocolat);
+
+}
+a:active {
+    color: var(--chocolat);
+}
+.carte-info {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid var(--miel);
+    margin: 30px;
+}
+
+/* Typographie du tableau */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #f5deb3;
+    color: var(--chocolat);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+
+tbody tr td:last-child {
+    text-align: right;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #faf3e8;
+}
+
+
+caption {
+    caption-side: bottom;
+    font-style: italic;
+}
+h1 {
+    color:red;
+}
+p {
+    color:green;
+}
+main p {
+    color: blue;
+}
+.mise-en-avant {
+    color red;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--pistache);
+    color: rgb(93, 30, 30);
+    text-decoration: none;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

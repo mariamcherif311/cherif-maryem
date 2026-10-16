@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dar El Halwa - Patisserie fine tunisienne</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Dar El Halwa</h1>
@@ -28,11 +29,11 @@
                 <legend>Vos coordonnées</legend>
                 <p>
                     <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name=""nom" minlength="2" required>
+                    <input type="text" id="nom" name="nom" minlength="2" required>
                 </p>
                 <p>
                     <label for="prenom">prenom :</label>
-                    <input type="text" id=""prenom" name=""prenom" minlength="2" required>
+                    <input type="text" id="prenom" name="prenom" minlength="2" required>
                 </p>
                 <p>
                     <label for="email" >Adresse electronique : </label>
@@ -78,10 +79,7 @@
                     <input type="radio" id="occ-autre" name="occasion" value="autre">
                     <label for="occ-autre">Autre</label>
                 </fieldset>
-                <p> 
-                    <label for="date_retrait">Date de retrait :</label>
-                    <input type="date" id="date_retrait" name="date_retrait" min="2026-09-01" required>
-                </p>
+                
                 <p> 
                     <label for="parts">Nombre de parts :</label>
                     <input type="number" id="parts" name="parts" min="6" max="100" step="2" value="12" required>
@@ -133,14 +131,20 @@
             </fieldset>
             <fieldset>
                 <legend>confirmation</legend>
+                <p> 
+                    <label for="date_retrait">Date de retrait :</label>
+                    <input type="date" id="date_retrait" name="date_retrait" min="2026-09-01" required>
+                </p>
+                
             </fieldset>
+            
             <p>
                 <button type="submit">Envoyer ma commande</button>
                 <button type="reset">Tout effacer</button>
                 <button type="submit" formnovalidate>Envoyer sans validation</button>
             </p>
         </form>
-
+            
                 
     </main>
     <footer>
@@ -152,3 +156,4 @@
      </footer>
 
 </body>
+</html>
